@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assests/css/perfil comercio.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <title>Bouillon</title>
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Bouillon</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ms-5">
+          <a class="nav-link active" aria-current="page" href="site.html" target="_blank">Inicio</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link" href="perfil.html" target="_self"><i class="bi bi-person-fill"></i> Perfil</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link" href="avaliados.html" target="_blank"><i class="bi bi-star-fill"></i> Melhores avaliados</a>
+        </li>
+         <li class="nav-item ms-5">
+          <a class="nav-link" href="copa.html" target="_blank"><i class="bi bi-globe-americas"></i> Copa do mundo</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link" href="login.html" target="_blank"><i class="bi bi-person-circle"></i>Login</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link" aria-disabled="true"><i class="bi bi-gear-fill"></i> Configurações</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link disabled" aria-disabled="true"><i class="bi bi-box-arrow-right"></i> Logout</a>
+        </li>
+      </ul>
+      <form class="d-flex ms-auto"  role="search">
+      <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
+      <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+    </form>
+    </div>
+  </div>
+    </nav></div>
+<div class="info-bar">
+  <span class="info-bar-left">  Venha para a melhor churrascaria de Brodowski, se você ama uma picanha aqui é o seu lugar. Rua Capitão salomão-155-Centro</span>
+  <div class="info-bar-right">
+    <div class="icon-btn"><i class="bi bi-heart-fill"></i></div>
+    <div class="icon-btn"><i class="bi bi-exclamation-triangle-fill"></i></div>
+  </div>
+</div>
+<section class="favoritos">
+  <h1 class="text-center mt-5 mb-4">Demonstrações de Pratos</h1>
+  <div class="container-fluid px-3 my-5">
+
+    <div class="slider-container">
+      <button class="btn-slider btn-prev" id="prevFav" disabled>&#8592;</button>
+
+      <div class="slider-wrapper">
+        <div class="slider-track" id="trackFav">
+
+          <div class="slide-card card h-100 shadow-sm">
+            <img src="assests/imagens/prato1.png.png" class="card-img-top" alt="Cantinho da Picanha">
+           </div>
+
+          <div class="slide-card card h-100 shadow-sm">
+            <img src="assests/imagens/prato2.png.png" class="card-img-top" alt="Bar do Nelson">
+           </div>
+
+          <div class="slide-card card h-100 shadow-sm">
+            <img src="assests/imagens/prato3.png.png" class="card-img-top" alt="Rei das Massas">
+            
+          </div>
+          <div class="slide-card card h-100 shadow-sm">
+            <img src="assests/imagens/prato4.png.png" class="card-img-top" alt="Rei das Massas">
+      </div>
+
+      <button class="btn-slider btn-next" id="nextFav">&#8594;</button>
+    </div>
+
+  </div>
+</section>
+
+  <h1 class="text-center mt-5 mb-4"> Comentarios sobre o estabelecimento </h1>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-5 align-items-stretch">
+ <div class="col">
+  <div class="card1 h-100">
+    <div class="card-body2">
+      <span class="card-title">Faça sua avaliação</span>
+      <button class="comment-toggle-btn" onclick="toggleComment()">💬 Comentar</button>
+    </div>
+
+    <div class="comment-bar" id="commentBar">
+      <div class="comment-section">
+        <textarea id="commentInput" placeholder="Escreva um comentário..."></textarea>
+        <button class="send-btn" onclick="submitComment()">Enviar</button>
+        <div class="comments-list" id="commentsList"></div>
+      </div>
+    </div>
+  </div>
+   </div>
+ <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
+          <span>Victor Soares</span>
+        </div>
+        <h5 class="card-title">Rei das massas</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+<div class="col">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
+          <span>Victor Soares</span>
+        </div>
+        <h5 class="card-title">Rei das massas</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
+          <span>Victor Soares</span>
+        </div>
+        <h5 class="card-title">Rei das massas</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+   
+</div>
+<footer class="text-center py-3" style="background-color: gray">
+ Bouillon &copy; 2026
+</footer>
+  
+
+
+    
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ <script src="/assests/css/script.js"></script>
+</body>

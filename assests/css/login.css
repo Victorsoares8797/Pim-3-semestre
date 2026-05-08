@@ -1,0 +1,19 @@
+html, body{
+    height: 100%;
+     background-image: url(/assests/imagens/Gemini_Generated_Image_50nzad50nzad50nz.png );
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+.form-container{
+    max-width: 400px;
+    padding: 3rem;
+    background-color: white;
+}
+#foto{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: rgba(255,0,0,0.5);
+    background-color: rgb(255,0 0/50%);
+}

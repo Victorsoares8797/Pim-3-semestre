@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assests/css/perfil.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <title>Bouillon</title>
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Bouillon</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ms-5">
+          <a class="nav-link active" aria-current="page" href="site.html" target="_blank">Inicio</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link" href="perfil.html" target="_self"><i class="bi bi-person-fill"></i> Perfil</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link" href="avaliados.html" target="_blank"><i class="bi bi-star-fill"></i> Melhores avaliados</a>
+        </li>
+         <li class="nav-item ms-5">
+          <a class="nav-link" href="copa.html" target="_blank"><i class="bi bi-globe-americas"></i> Copa do mundo</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link" href="login.html" target="_blank"><i class="bi bi-person-circle"></i>Login</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link" aria-disabled="true"><i class="bi bi-gear-fill"></i> Configurações</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a class="nav-link disabled" aria-disabled="true"><i class="bi bi-box-arrow-right"></i> Logout</a>
+        </li>
+      </ul>
+      <form class="d-flex ms-auto"  role="search">
+      <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
+      <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+    </form>
+    </div>
+  </div>
+</nav>
+<div id="user">
+<img src="assests/imagens/avatar.png" id="avatar">
+<p id="user_infos">
+<span class="descriçao">
+  Victor soares
+</span>
+<span class="descriçao">
+  victoroliveira@gmail.com
+</span>
+</p>
+</div>
+<section class="favoritos">
+  <h1 class="text-center mt-5 mb-4"><i class="bi bi-heart-fill"></i> Restaurantes Favoritos</h1>
+  <div class="container-fluid px-3 my-5">
+
+    <div class="slider-container">
+      <button class="btn-slider btn-prev" id="prevFav" disabled>&#8592;</button>
+
+      <div class="slider-wrapper">
+        <div class="slider-track" id="trackFav">
+
+          <div class="slide-card card h-100 shadow-sm">
+            <img src="assests/imagens/cantinho da picanha.png" class="card-img-top" alt="Cantinho da Picanha">
+            <div class="card-body">
+              <h5 class="card-title">Cantinho da Picanha</h5>
+              <a href="#" class="btn btn-primary w-100">Saiba Mais</a>
+            </div>
+          </div>
+
+          <div class="slide-card card h-100 shadow-sm">
+            <img src="assests/imagens/Bar do nelson.png" class="card-img-top" alt="Bar do Nelson">
+            <div class="card-body">
+              <h5 class="card-title">Bar do Nelson</h5>
+              <a href="#" class="btn btn-primary w-100">Saiba Mais</a>
+            </div>
+          </div>
+
+          <div class="slide-card card h-100 shadow-sm">
+            <img src="assests/imagens/Rei das massas.png" class="card-img-top" alt="Rei das Massas">
+            <div class="card-body">
+              <h5 class="card-title">Rei das Massas</h5>
+              <a href="#" class="btn btn-primary w-100">Saiba Mais</a>
+            </div>
+          </div>
+          <div class="slide-card card h-100 shadow-sm">
+            <img src="assests/imagens/cakes cafe.png" class="card-img-top" alt="Rei das Massas">
+            <div class="card-body">
+              <h5 class="card-title">Rei das Massas</h5>
+              <a href="#" class="btn btn-primary w-100">Saiba Mais</a>
+
+        </div>
+      </div>
+
+      <button class="btn-slider btn-next" id="nextFav">&#8594;</button>
+    </div>
+
+  </div>
+</section>
+
+  <h1 class="text-center mt-5 mb-4"> Seus comentarios </h1>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
+          <span>Victor Soares</span>
+        </div>
+        <h5 class="card-title">Rei da picanha</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
+          <span>Victor Soares</span>
+        </div>
+        <h5 class="card-title">Rei das massas</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer class="text-center py-3" style="background-color: gray">
+ Bouillon &copy; 2026
+</footer>
+  
+
+
+    
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ <script src="/assests/css/script.js"></script>
+</body>
+</html>
