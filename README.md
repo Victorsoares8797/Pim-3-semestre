@@ -1,4 +1,5 @@
 🍽️ Buillon - Plataforma de Avaliação de Restaurantes
+
 Este projeto consiste em uma plataforma web desenvolvida para ajudar usuários a escolherem e avaliarem restaurantes. O objetivo principal é criar uma comunidade onde as pessoas possam compartilhar suas experiências gastronômicas e descobrir novos lugares para visitar.
 
 🚀 Como Executar o Projeto
