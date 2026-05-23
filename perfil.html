@@ -3,43 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importação do framework Bootstrap 5 para estilização e componentes responsivos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Importação do CSS personalizado da página de perfil -->
     <link rel="stylesheet" href="assests/css/perfil.css">
+    <!-- Importação dos ícones do Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <title>Bouillon</title>
 </head>
 <body>
+
+  <!-- ========== NAVBAR - Barra de navegação principal ========== -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Bouillon</a>
+    <!-- Logo e nome do site -->
+    <a class="navbar-brand" href="#"><img src="assests/imagens/bouillon.png" width="50px" height="50px"> Bouillon</a>
+    <!-- Botão hamburguer para telas menores (mobile) -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Links de navegação - colapsam em telas pequenas -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        <!-- Link para a página inicial (abre em nova aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link active" aria-current="page" href="site.html" target="_blank">Inicio</a>
         </li>
+        <!-- Link para o perfil do usuário (abre na mesma aba - página atual) -->
         <li class="nav-item ms-5">
           <a class="nav-link" href="perfil.html" target="_self"><i class="bi bi-person-fill"></i> Perfil</a>
         </li>
+        <!-- Link para a página de melhores avaliados (abre em nova aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link" href="avaliados.html" target="_blank"><i class="bi bi-star-fill"></i> Melhores avaliados</a>
         </li>
+        <!-- Link para a página da Copa do Mundo (abre em nova aba) -->
          <li class="nav-item ms-5">
           <a class="nav-link" href="copa.html" target="_blank"><i class="bi bi-globe-americas"></i> Copa do mundo</a>
         </li>
+        <!-- Link para a página de login (abre em nova aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link" href="login.html" target="_blank"><i class="bi bi-person-circle"></i>Login</a>
         </li>
-        <li class="nav-item ms-5">
-          <a class="nav-link" aria-disabled="true"><i class="bi bi-gear-fill"></i> Configurações</a>
-        </li>
-        <li class="nav-item ms-5">
-          <a class="nav-link disabled" aria-disabled="true"><i class="bi bi-box-arrow-right"></i> Logout</a>
-        </li>
       </ul>
+      <!-- Campo de busca alinhado à direita da navbar -->
       <form class="d-flex ms-auto"  role="search">
       <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
       <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
@@ -47,106 +55,148 @@
     </div>
   </div>
 </nav>
+<!-- ========== FIM DA NAVBAR ========== -->
+
+<!-- ========== ÁREA DO PERFIL DO USUÁRIO ========== -->
 <div id="user">
-<img src="assests/imagens/avatar.png" id="avatar">
-<p id="user_infos">
-<span class="descriçao">
-  Victor soares
-</span>
-<span class="descriçao">
-  victoroliveira@gmail.com
-</span>
-</p>
+  <!-- Foto/avatar do usuário -->
+  <img src="assests/imagens/avatar.png" id="avatar">
+  <!-- Informações do usuário: nome e e-mail -->
+  <p id="user_infos">
+    <span class="descriçao">
+      Victor soares
+    </span>
+    <span class="descriçao">
+      victoroliveira@gmail.com
+    </span>
+  </p>
 </div>
+<!-- ========== FIM DA ÁREA DO PERFIL ========== -->
+
+<!-- ========== SEÇÃO DE RESTAURANTES FAVORITOS COM SLIDER ========== -->
 <section class="favoritos">
   <h1 class="text-center mt-5 mb-4"><i class="bi bi-heart-fill"></i> Restaurantes Favoritos</h1>
   <div class="container-fluid px-3 my-5">
 
     <div class="slider-container">
+      <!-- Botão para voltar ao slide anterior (começa desabilitado) -->
       <button class="btn-slider btn-prev" id="prevFav" disabled>&#8592;</button>
 
       <div class="slider-wrapper">
+        <!-- Trilha do slider que contém todos os cards -->
         <div class="slider-track" id="trackFav">
 
+          <!-- Card 1: Cantinho da Picanha -->
           <div class="slide-card card h-100 shadow-sm">
             <img src="assests/imagens/cantinho da picanha.png" class="card-img-top" alt="Cantinho da Picanha">
             <div class="card-body">
+              <!-- Badge verde com nota 10 -->
+              <span class="badge bg-success text-dark position-absolute top-8 end-0 m-2">10</span>
               <h5 class="card-title">Cantinho da Picanha</h5>
-              <a href="#" class="btn btn-primary w-100">Saiba Mais</a>
+              <a href="perfil comercio.html" target="_blank" class="btn btn-primary w-100">Saiba Mais</a>
             </div>
           </div>
 
+          <!-- Card 2: Bar do Nelson -->
           <div class="slide-card card h-100 shadow-sm">
             <img src="assests/imagens/Bar do nelson.png" class="card-img-top" alt="Bar do Nelson">
             <div class="card-body">
+              <!-- Badge verde com nota 10 -->
+              <span class="badge bg-success text-dark position-absolute top-8 end-0 m-2">10</span>
               <h5 class="card-title">Bar do Nelson</h5>
               <a href="#" class="btn btn-primary w-100">Saiba Mais</a>
             </div>
           </div>
 
+          <!-- Card 3: Rei das Massas -->
           <div class="slide-card card h-100 shadow-sm">
             <img src="assests/imagens/Rei das massas.png" class="card-img-top" alt="Rei das Massas">
             <div class="card-body">
+              <!-- Badge amarelo com nota 6 -->
+              <span class="badge bg-warning text-dark position-absolute top-8 end-0 m-2">6</span>
               <h5 class="card-title">Rei das Massas</h5>
               <a href="#" class="btn btn-primary w-100">Saiba Mais</a>
             </div>
           </div>
+
+          <!-- Card 4: Cakes Café -->
           <div class="slide-card card h-100 shadow-sm">
             <img src="assests/imagens/cakes cafe.png" class="card-img-top" alt="Rei das Massas">
             <div class="card-body">
-              <h5 class="card-title">Rei das Massas</h5>
+              <!-- Badge verde com nota 10 -->
+              <span class="badge bg-success text-dark position-absolute top-8 end-0 m-2">10</span>
+              <h5 class="card-title">Cakes Café</h5>
               <a href="#" class="btn btn-primary w-100">Saiba Mais</a>
 
         </div>
       </div>
+    </div>
 
+      <!-- Botão para avançar ao próximo slide -->
       <button class="btn-slider btn-next" id="nextFav">&#8594;</button>
     </div>
 
   </div>
 </section>
+<!-- ========== FIM DA SEÇÃO DE FAVORITOS ========== -->
 
+<!-- ========== SEÇÃO DE COMENTÁRIOS DO USUÁRIO ========== -->
   <h1 class="text-center mt-5 mb-4"> Seus comentarios </h1>
+  <!-- Grade responsiva: 1 coluna em mobile, 2 colunas em telas médias/grandes -->
   <div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+
+  <!-- Comentário 1: Rei da Picanha -->
   <div class="col">
     <div class="card">
+      <!-- Badge verde com a nota dada pelo usuário -->
+      <span class="badge bg-success text-dark position-absolute top-0 end-0 m-2">
+      10
+    </span>
       <div class="card-body">
+        <!-- Foto e nome do usuário que comentou -->
         <div class="d-flex align-items-center gap-2 mb-3">
           <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
           <span>Victor Soares</span>
         </div>
+        <!-- Nome do restaurante e texto do comentário -->
         <h5 class="card-title">Rei da picanha</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Um excelente restaurante, com uma picanha maravilhosa.</p>
       </div>
     </div>
   </div>
+
+  <!-- Comentário 2: Rei das Massas -->
   <div class="col">
     <div class="card">
       <div class="card-body">
+        <!-- Badge verde com a nota dada pelo usuário -->
+        <span class="badge bg-success text-dark position-absolute top-0 end-0 m-2">
+      9
+    </span>
+        <!-- Foto e nome do usuário que comentou -->
         <div class="d-flex align-items-center gap-2 mb-3">
           <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
           <span>Victor Soares</span>
         </div>
+        <!-- Nome do restaurante e texto do comentário -->
         <h5 class="card-title">Rei das massas</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Melhor macarrão ao vivo que ja comi, recomendo para todos.</p>
       </div>
     </div>
   </div>
 
 </div>
+<!-- ========== FIM DA SEÇÃO DE COMENTÁRIOS ========== -->
+
+<!-- ========== RODAPÉ do site ========== -->
 <footer class="text-center py-3" style="background-color: gray">
  Bouillon &copy; 2026
 </footer>
-  
+<!-- ========== FIM DO RODAPÉ ========== -->
 
-
-    
-
-
-
-
-
+<!-- Importação do JavaScript do Bootstrap (necessário para componentes interativos) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- Importação do JavaScript personalizado do site -->
  <script src="/assests/css/script.js"></script>
 </body>
 </html>

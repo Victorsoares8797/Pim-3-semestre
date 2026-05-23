@@ -1,59 +1,71 @@
+/* ========== RESET GERAL - Remove margens e paddings padrão do navegador ========== */
 * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      box-sizing: border-box; /* Inclui borda e padding no cálculo do tamanho total */
     }
 
-    body {
-      min-height: 100vh;
+/* ========== CONFIGURAÇÃO GERAL DO BODY ========== */
+body {
+      min-height: 100vh; /* Ocupa no mínimo toda a altura da tela */
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /* Organiza os elementos em coluna */
     }
 
-    .lista {
+/* ========== LISTA DE ESTABELECIMENTOS ========== */
+.lista {
       display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 8px;
+      flex-direction: column; /* Itens empilhados verticalmente */
+      flex: 1;                /* Ocupa o espaço disponível na página */
+      gap: 8px;               /* Espaço entre os itens */
       padding: 8px;
     }
 
-    .item {
+/* ========== ITEM INDIVIDUAL DA LISTA ========== */
+.item {
       flex: 1;
       display: flex;
-      align-items: center;
+      align-items: center;            /* Centraliza verticalmente o conteúdo */
       padding: 20px 40px;
       border-bottom: 1px solid #ddd;
       font-size: 1.2rem;
       font-family: Arial, sans-serif;
       background-color: #fff;
-      transition: background-color 0.2s;
+      transition: background-color 0.2s; /* Animação suave no hover */
       cursor: pointer;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      justify-content: space-between;
+      border: 2px solid #ddd;           /* Borda cinza ao redor do item */
+      border-radius: 8px;               /* Bordas arredondadas */
+      justify-content: space-between;   /* Espaça o conteúdo entre esquerda e direita */
     }
 
-    .item:hover {
+/* Efeito de destaque ao passar o mouse sobre o item */
+.item:hover {
       background-color: #f0f0f0;
     }
 
-    .item:last-child {
+/* Remove a borda inferior do último item da lista */
+.item:last-child {
       border-bottom: none;
     }
-    #foto{
+
+/* ========== FOTO/LOGO DO ESTABELECIMENTO NA LISTA ========== */
+#foto{
         width: 70px;
         height: 70px;
-        object-fit: cover;
-        border-radius: 100px;
-        margin-right: 16px;
+        object-fit: cover;    /* Recorta a imagem para preencher sem distorcer */
+        border-radius: 100px; /* Deixa a imagem redonda */
+        margin-right: 16px;   /* Espaço entre a foto e o nome */
     }
-    h1{
-        text-align: center;
+
+/* ========== TÍTULO DA PÁGINA ========== */
+h1{
+        text-align: center; /* Centraliza o título */
     }
-    #next{
+
+/* ========== PAGINAÇÃO - Centraliza a navegação de páginas ========== */
+#next{
       display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+      align-items: center;      /* Centraliza verticalmente */
+      justify-content: center;  /* Centraliza horizontalmente */
+      display: flex;            /* Reforça o flexbox (declaração duplicada) */
     }

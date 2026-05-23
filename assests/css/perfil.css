@@ -1,57 +1,68 @@
-
-
+/* ========== AVATAR DO USUÁRIO ========== */
 #avatar{
-    width: 300px;
-    height:300px;
-    border-radius: 50%;
-    border: 3px solid #000;
-}
-#user{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    
-}
-#user_infos{
-    display: flex;
-    flex-direction:column;
-}
-.favoritos{
-    background-color:azure;
-    padding:3px;
-    border-radius: 20px;
-    
-}
-.slider-container {
-  position: relative;
-  padding: 0 44px;
+    width: 300px;        /* Largura fixa do avatar */
+    height:300px;        /* Altura fixa do avatar */
+    border-radius: 50%;  /* Deixa a imagem redonda */
+    border: 3px solid #000; /* Borda preta ao redor do avatar */
 }
 
+/* ========== ÁREA DO PERFIL DO USUÁRIO ========== */
+#user{
+    display: flex;            /* Ativa o flexbox */
+    align-items: center;      /* Centraliza verticalmente os itens */
+    justify-content: center;  /* Centraliza horizontalmente os itens */
+    display: flex;            /* Reforça o flexbox (declaração duplicada) */
+    flex-direction: column;   /* Organiza os itens em coluna (um abaixo do outro) */
+}
+
+/* ========== INFORMAÇÕES DO USUÁRIO (nome e email) ========== */
+#user_infos{
+    display: flex;           /* Ativa o flexbox */
+    flex-direction: column;  /* Organiza nome e email em coluna */
+}
+
+/* ========== SEÇÃO DE FAVORITOS ========== */
+.favoritos{
+    background-color: azure; /* Fundo azul bem claro */
+    padding: 3px;            /* Espaçamento interno */
+    border-radius: 20px;     /* Bordas arredondadas */
+}
+
+/* ========== SLIDER - Codigo de edição dos slides ========== */
+
+/* Contêiner principal do slider com espaço para os botões laterais */
+.slider-container {
+  position: relative;  /* Permite posicionar os botões de forma absoluta dentro dele */
+  padding: 0 44px;     /* Espaço lateral para os botões de navegação */
+}
+
+/* Área visível do slider - esconde o que está fora do campo de visão */
 .slider-wrapper {
   overflow: hidden;
 }
 
+/* Trilha que contém todos os cards e se move horizontalmente */
 .slider-track {
-  display: flex;
-  gap: 16px;
-  transition: transform 0.4s ease;
+  display: flex;                    /* Coloca os cards lado a lado */
+  gap: 16px;                        /* Espaço entre os cards */
+  transition: transform 0.4s ease;  /* Animação suave ao deslizar */
 }
 
+/* Cada card ocupa 1/3 da largura disponível (3 cards visíveis por vez) */
 .slide-card {
   flex: 0 0 calc(33.333% - 11px);
 }
 
+/* ========== BOTÕES DE NAVEGAÇÃO DO SLIDER ========== */
 .btn-slider {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: absolute;       /* Posicionado em relação ao slider-container */
+  top: 50%;                 /* Alinhado verticalmente ao centro */
+  transform: translateY(-50%); /* Ajuste fino para centralização perfeita */
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  background: #fff;
+  border-radius: 50%;       /* Botão redondo */
+  border: 1px solid #ccc;   /* Borda cinza clara */
+  background: #fff;         /* Fundo branco */
   font-size: 18px;
   cursor: pointer;
   display: flex;
@@ -59,16 +70,21 @@
   justify-content: center;
 }
 
+/* Estilo do botão quando está desabilitado (sem slides anteriores/próximos) */
 .btn-slider:disabled {
-  opacity: 0.3;
-  cursor: default;
+  opacity: 0.3;       /* Deixa o botão transparente */
+  cursor: default;    /* Remove o cursor de clique */
 }
 
+/* Posiciona o botão anterior à esquerda */
 .btn-prev { left: 0; }
+
+/* Posiciona o botão próximo à direita */
 .btn-next { right: 0; }
 
+/* ========== RESPONSIVIDADE - Telas menores que 768px (mobile) ========== */
 @media (max-width: 768px) {
   .slide-card {
-    flex: 0 0 100%;
+    flex: 0 0 100%; /* Em mobile, cada card ocupa 100% da largura (1 card por vez) */
   }
 }

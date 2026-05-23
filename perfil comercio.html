@@ -3,157 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importação do framework Bootstrap 5 para estilização e componentes responsivos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Importação do CSS personalizado da página de perfil do comércio -->
     <link rel="stylesheet" href="assests/css/perfil comercio.css">
+    <!-- Importação dos ícones do Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <title>Bouillon</title>
 </head>
 <body>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+  <!-- ========== NAVBAR - Barra de navegação principal ========== -->
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Bouillon</a>
+    <!-- Logo e nome do site -->
+    <a class="navbar-brand" href="#"><img src="assests/imagens/bouillon.png" width="50px" height="50px"> Bouillon</a>
+    <!-- Botão hamburguer para telas menores (mobile) -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Links de navegação - colapsam em telas pequenas -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        <!-- Link para a página inicial (abre em nova aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link active" aria-current="page" href="site.html" target="_blank">Inicio</a>
         </li>
+        <!-- Link para o perfil do usuário (abre na mesma aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link" href="perfil.html" target="_self"><i class="bi bi-person-fill"></i> Perfil</a>
         </li>
+        <!-- Link para a página de melhores avaliados (abre em nova aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link" href="avaliados.html" target="_blank"><i class="bi bi-star-fill"></i> Melhores avaliados</a>
         </li>
+        <!-- Link para a página da Copa do Mundo (abre em nova aba) -->
          <li class="nav-item ms-5">
           <a class="nav-link" href="copa.html" target="_blank"><i class="bi bi-globe-americas"></i> Copa do mundo</a>
         </li>
+        <!-- Link para a página de login (abre em nova aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link" href="login.html" target="_blank"><i class="bi bi-person-circle"></i>Login</a>
         </li>
-        <li class="nav-item ms-5">
-          <a class="nav-link" aria-disabled="true"><i class="bi bi-gear-fill"></i> Configurações</a>
-        </li>
-        <li class="nav-item ms-5">
-          <a class="nav-link disabled" aria-disabled="true"><i class="bi bi-box-arrow-right"></i> Logout</a>
-        </li>
       </ul>
+      <!-- Campo de busca alinhado à direita da navbar -->
       <form class="d-flex ms-auto"  role="search">
       <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
       <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
     </form>
     </div>
   </div>
-    </nav></div>
+    </nav>
+    <!-- ========== FIM DA NAVBAR ========== -->
+
+    <!-- ========== SEÇÃO HERO - Foto de perfil e capa do estabelecimento ========== -->
+<div class="hero-section">
+  <!-- Painel com avatar, nome e e-mail do estabelecimento -->
+  <div class="user-panel">
+    <div class="avatar-ring">
+      <!-- Logo/foto do estabelecimento -->
+      <img src="assests/imagens/cantinho da picanha.png" alt="Avatar">
+    </div>
+    <span class="name">Cantinho da Picanha</span>
+    <span class="email">cantinhodapicanha@gmail.com</span>
+  </div>
+  <!-- Imagem de capa do estabelecimento -->
+  <div class="capa-wrapper">
+    <img src="assests/imagens/cantinho capa.png.png" alt="Imagem de Capa" class="capa-img">
+  </div>
+</div>
+<!-- ========== FIM DA SEÇÃO HERO ========== -->
+
+<!-- ========== BARRA DE INFORMAÇÕES DO ESTABELECIMENTO ========== -->
 <div class="info-bar">
-  <span class="info-bar-left">  Venha para a melhor churrascaria de Brodowski, se você ama uma picanha aqui é o seu lugar. Rua Capitão salomão-155-Centro</span>
+  <!-- Descrição, endereço e horário de funcionamento -->
+  <span class="info-bar-left">  Venha para a melhor churrascaria de Brodowski, se você ama uma picanha aqui é o seu lugar. Rua Capitão salomão-155-Centro/Horario de funcionamento das 11:00 as 23:00 de terça a domingo.</span>
   <div class="info-bar-right">
+    <!-- Botão para favoritar o estabelecimento -->
     <div class="icon-btn"><i class="bi bi-heart-fill"></i></div>
+    <!-- Botão para reportar/denunciar o estabelecimento -->
     <div class="icon-btn"><i class="bi bi-exclamation-triangle-fill"></i></div>
   </div>
 </div>
+<!-- ========== FIM DA BARRA DE INFORMAÇÕES ========== -->
+
+<!-- ========== SEÇÃO DE SLIDER COM FOTOS DOS PRATOS ========== -->
 <section class="favoritos">
   <h1 class="text-center mt-5 mb-4">Demonstrações de Pratos</h1>
   <div class="container-fluid px-3 my-5">
 
+    <!-- Codigos dos slides dos pratos -->
     <div class="slider-container">
+      <!-- Botão para voltar ao slide anterior (começa desabilitado) -->
       <button class="btn-slider btn-prev" id="prevFav" disabled>&#8592;</button>
 
       <div class="slider-wrapper">
+        <!-- Trilha do slider que contém os cards dos pratos -->
         <div class="slider-track" id="trackFav">
 
+          <!-- Card do Prato 1 -->
           <div class="slide-card card h-100 shadow-sm">
             <img src="assests/imagens/prato1.png.png" class="card-img-top" alt="Cantinho da Picanha">
            </div>
 
+          <!-- Card do Prato 2 -->
           <div class="slide-card card h-100 shadow-sm">
             <img src="assests/imagens/prato2.png.png" class="card-img-top" alt="Bar do Nelson">
            </div>
 
+          <!-- Card do Prato 3 -->
           <div class="slide-card card h-100 shadow-sm">
             <img src="assests/imagens/prato3.png.png" class="card-img-top" alt="Rei das Massas">
-            
           </div>
+
+          <!-- Card do Prato 4 -->
           <div class="slide-card card h-100 shadow-sm">
             <img src="assests/imagens/prato4.png.png" class="card-img-top" alt="Rei das Massas">
       </div>
+      
+    </div>
+  </div>
 
+      <!-- Botão para avançar ao próximo slide -->
       <button class="btn-slider btn-next" id="nextFav">&#8594;</button>
     </div>
 
   </div>
 </section>
+<!-- ========== FIM DA SEÇÃO DE PRATOS ========== -->
 
+<!-- ========== SEÇÃO DE COMENTÁRIOS E AVALIAÇÕES ========== -->
   <h1 class="text-center mt-5 mb-4"> Comentarios sobre o estabelecimento </h1>
+  <!-- Grade responsiva: 1 coluna em mobile, 2 colunas em telas médias/grandes -->
   <div class="row row-cols-1 row-cols-md-2 g-4 mt-5 align-items-stretch">
+
+  <!-- Card de formulário para o usuário fazer sua avaliação -->
  <div class="col">
-  <div class="card1 h-100">
+  <div class="card h-100">
     <div class="card-body2">
-      <span class="card-title">Faça sua avaliação</span>
-      <button class="comment-toggle-btn" onclick="toggleComment()">💬 Comentar</button>
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <span class="card-title">Faça sua avaliação</span>
+      </div>
+      <!-- Botão que abre/fecha o formulário de comentário -->
+      <button class="comment-toggle-btn" id="toggleBtn" onclick="toggleComment()">
+        💬 Comentar
+      </button>
     </div>
 
+    <!-- Área oculta do formulário de avaliação (exibida ao clicar em Comentar) -->
     <div class="comment-bar" id="commentBar">
+      <!-- Grade de notas para o usuário selecionar sua avaliação -->
+      <div class="rating-label">Sua nota</div>
+      <div class="rating-grid" id="ratingGrid"></div>
+
       <div class="comment-section">
-        <textarea id="commentInput" placeholder="Escreva um comentário..."></textarea>
-        <button class="send-btn" onclick="submitComment()">Enviar</button>
-        <div class="comments-list" id="commentsList"></div>
+        <!-- Campo de texto para o comentário opcional -->
+        <textarea id="commentInput" placeholder="Escreva um comentário (opcional)..."></textarea>
+        <!-- Botão para enviar a avaliação -->
+        <button class="send-btn" onclick="submitComment()">Enviar avaliação</button>
+        <!-- Lista de avaliações enviadas -->
+        <div class="comments-list" id="commentsList">
+          <p class="empty-state" id="emptyState">Nenhuma avaliação ainda.</p>
+        </div>
       </div>
     </div>
   </div>
    </div>
+
+  <!-- Comentário 1: Gabriel Silva - nota 10 -->
  <div class="col">
     <div class="card">
+       <!-- Badge verde com nota 10 -->
+       <span class="badge bg-success text-dark position-absolute top-0 end-0 m-2">
+      10
+    </span>
       <div class="card-body">
+        <!-- Foto e nome do usuário que comentou -->
         <div class="d-flex align-items-center gap-2 mb-3">
           <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
-          <span>Victor Soares</span>
+          <span>Gabriel Silva</span>
         </div>
-        <h5 class="card-title">Rei das massas</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <!-- Nome do estabelecimento e texto do comentário -->
+        <h5 class="card-title">Cantinho da picanha</h5>
+        <p class="card-text">otimo lugar,bem aconchegante e uma picanha maravilhosa.</p>
       </div>
     </div>
   </div>
+
+  <!-- Comentário 2: Tulio Nascimento - nota 9 -->
 <div class="col">
     <div class="card">
+      <!-- Badge verde com nota 9 -->
+      <span class="badge bg-success text-dark position-absolute top-0 end-0 m-2">
+      9
+    </span>
       <div class="card-body">
+        <!-- Foto e nome do usuário que comentou -->
         <div class="d-flex align-items-center gap-2 mb-3">
           <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
-          <span>Victor Soares</span>
+          <span>Tulio Nascimento</span>
         </div>
-        <h5 class="card-title">Rei das massas</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <!-- Nome do estabelecimento e texto do comentário -->
+        <h5 class="card-title">Cantinho da picanha</h5>
+        <p class="card-text">um lugar maravilhoso,tem um otimo lugar para deixar as crianças e voce conseguir comer tranquilo.</p>
       </div>
     </div>
   </div>
+
+  <!-- Comentário 3: João Souza - nota 4 (avaliação negativa) -->
   <div class="col">
     <div class="card">
+      <!-- Badge vermelho com nota 4 -->
+      <span class="badge bg-danger text-dark position-absolute top-0 end-0 m-2">
+      4
+    </span>
       <div class="card-body">
+        <!-- Foto e nome do usuário que comentou -->
         <div class="d-flex align-items-center gap-2 mb-3">
           <img src="assests/imagens/avatar.png" width="40px" class="rounded-circle" alt="Avatar">
-          <span>Victor Soares</span>
+          <span>João Souza</span>
         </div>
-        <h5 class="card-title">Rei das massas</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <!-- Nome do estabelecimento e texto do comentário -->
+        <h5 class="card-title">Cantinho da picanha</h5>
+        <p class="card-text">Não gostei,lugar apertado e a carne estava fria.</p>
       </div>
     </div>
   </div>
    
 </div>
+<!-- ========== FIM DA SEÇÃO DE COMENTÁRIOS ========== -->
+
+<!-- ========== RODAPÉ do site ========== -->
 <footer class="text-center py-3" style="background-color: gray">
  Bouillon &copy; 2026
 </footer>
-  
+<!-- ========== FIM DO RODAPÉ ========== -->
 
-
-    
-
-
-
-
-
+<!-- Importação do JavaScript do Bootstrap (necessário para componentes interativos) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- Importação do JavaScript personalizado do site -->
  <script src="/assests/css/script.js"></script>
 </body>
+</html>

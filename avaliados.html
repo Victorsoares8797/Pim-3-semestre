@@ -3,43 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importação do framework Bootstrap 5 para estilização e componentes responsivos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Importação do CSS personalizado da página de melhores avaliados -->
     <link rel="stylesheet" href="assests/css/avaliados.css">
+    <!-- Importação dos ícones do Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <title>Bouillon</title>
 </head>
 <body>
+
+  <!-- ========== NAVBAR - Barra de navegação principal ========== -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Bouillon</a>
+    <!-- Logo e nome do site -->
+    <a class="navbar-brand" href="#"> <img src="assests/imagens/bouillon.png" width="50px" height="50px"> Bouillon</a>
+    <!-- Botão hamburguer para telas menores (mobile) -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Links de navegação - colapsam em telas pequenas -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        <!-- Link para a página inicial (abre na mesma aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link active" aria-current="page" href="site.html" target="_self">Inicio</a>
         </li>
+        <!-- Link para o perfil do usuário (abre em nova aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link" href="perfil.html" target="_blank"><i class="bi bi-person-fill"></i> Perfil</a>
         </li>
+        <!-- Link para a página de mais avaliados (abre na mesma aba - página atual) -->
         <li class="nav-item ms-5">
           <a class="nav-link" href="avaliados.html" target="_self"><i class="bi bi-star-fill"></i> Mais avaliados</a>
         </li>
+        <!-- Link para a página da Copa do Mundo (abre em nova aba) -->
          <li class="nav-item ms-5">
           <a class="nav-link" href="copa.html" target="_blank"><i class="bi bi-globe-americas"></i> Copa do mundo</a>
         </li>
+        <!-- Link para a página de login (abre em nova aba) -->
         <li class="nav-item ms-5">
           <a class="nav-link" href="login.html" target="_blank"><i class="bi bi-person-circle"></i>Login</a>
         </li>
-        <li class="nav-item ms-5">
-          <a class="nav-link" aria-disabled="true"><i class="bi bi-gear-fill"></i> Configurações</a>
-        </li>
-        <li class="nav-item ms-5">
-          <a class="nav-link disabled" aria-disabled="true"><i class="bi bi-box-arrow-right"></i> Logout</a>
-        </li>
       </ul>
+      <!-- Campo de busca alinhado à direita da navbar -->
       <form class="d-flex ms-auto"  role="search">
       <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
       <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
@@ -47,55 +55,106 @@
     </div>
   </div>
 </nav>
+<!-- ========== FIM DA NAVBAR ========== -->
+
+<!-- ========== TOP 3 ESTABELECIMENTOS - Cards em destaque ========== -->
 <h1><i class="bi bi-star-fill"></i> Melhores avaliados</h1>
 <div class="card-group gap-3 px-3">
+
+  <!-- Card 1º lugar: Bar do Nelson - nota 10 -->
   <div class="card">
     <img src="assests/imagens/Bar do nelson.png" class="card-img-top" alt="...">
     <div class="card-body">
+      <!-- Badge verde com nota 10 -->
+      <span class="badge bg-success text-dark position-absolute top-8 end-0 m-2">
+      10
+    </span>
       <h5 class="card-title">1-Bar do Nelson</h5>
       <p class="card-text"></p>
        <a href="#" class="btn btn-primary">Saiba mais</a>
     </div>
   </div>
+
+  <!-- Card 2º lugar: Cakes Café - nota 10 -->
   <div class="card">
     <img src="assests/imagens/cakes cafe.png" class="card-img-top" alt="...">
     <div class="card-body">
+      <!-- Badge verde com nota 10 -->
+      <span class="badge bg-success text-dark position-absolute top-8 end-0 m-2">
+      10
+    </span>
       <h5 class="card-title">2-Cakes Cafe</h5>
       <p class="card-text"></p>
        <a href="#" class="btn btn-primary">Saiba mais</a>
     </div>
   </div>
+
+  <!-- Card 3º lugar: Cantinho da Picanha - nota 10 -->
   <div class="card">
     <img src="assests/imagens/cantinho da picanha.png" class="card-img-top" alt="...">
     <div class="card-body">
+      <!-- Badge verde com nota 10 -->
+      <span class="badge bg-success text-dark position-absolute top-8 end-0 m-2">
+      10
+    </span>
       <h5 class="card-title">3-Cantinho da Picanha</h5>
       <p class="card-text"></p>
-       <a href="#" class="btn btn-primary">Saiba mais</a>
+       <a href="perfil comercio.html" target="_blank" class="btn btn-primary">Saiba mais</a>
     </div>
   </div>
+
 </div>
+<!-- ========== FIM DO TOP 3 ========== -->
+
+<!-- ========== LISTA DOS DEMAIS ESTABELECIMENTOS (4º ao 8º lugar) ========== -->
 <div class="lista">
+
+    <!-- 4º lugar: Pizzaria 3 Irmãos - nota 9 (badge verde) -->
     <div class="item"><img src="assests/imagens/pizzaria 3 irmaos.png.png" width="70px" id="foto"> 4- pizzaria 3 irmaos
+      <span class="badge bg-success text-dark position-center top-8 end-0 m-2">
+      9
+    </span>
     <a href="#" class="btn btn-primary ms-auto">Saiba mais</a></div>
+
+    <!-- 5º lugar: Sushi Fan - nota 7 (badge amarelo) -->
     <div class="item"><img src="assests/imagens/sushi.png" width="50px" id="foto" alt=""> 5- Sushi Fan
+       <span class="badge bg-warning text-dark position-center top-8 end-0 m-2">7</span>
     <a href="#" class="btn btn-primary ms-auto">Saiba mais</a></div>
+
+    <!-- 6º lugar: Rei das Massas - nota 6 (badge amarelo) -->
     <div class="item"><img src="assests/imagens/Rei das massas.png" width="50px" id="foto" alt=""> 6- Rei das massas
+       <span class="badge bg-warning text-dark position-center top-8 end-0 m-2">6</span>
     <a href="#" class="btn btn-primary ms-auto">Saiba mais</a></div>
+
+    <!-- 7º lugar: Fábrica de Sabores - nota 5 (badge amarelo) -->
     <div class="item"><img src="assests/imagens/fabrica de sabores.jpg" width="50px" id="foto" alt="">7- Fabrica de sabores
+       <span class="badge bg-warning text-dark position-center top-8 end-0 m-2">5</span>
     <a href="#" class="btn btn-primary ms-auto">Saiba mais</a></div>
+
+    <!-- 8º lugar: Borcelle Comidas Caseiras - nota 4 (badge vermelho) -->
     <div class="item"><img src="assests/imagens/comida caseira.png" width="50px" id="foto" alt="">8- Borcelle - Comidas caseiras
+       <span class="badge bg-danger text-dark position-center top-8 end-0 m-2">
+      4
+    </span>
     <a href="#" class="btn btn-primary ms-auto">Saiba mais</a></div>
+
   </div>
+<!-- ========== FIM DA LISTA ========== -->
+
+<!-- ========== PAGINAÇÃO - Navegação entre páginas de resultados ========== -->
   <nav id="next" aria-label="Page navigation example">
   <ul class="pagination">
+    <!-- Botão para ir à página anterior -->
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
+    <!-- Botões de páginas numeradas -->
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <!-- Botão para ir à próxima página -->
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
@@ -103,12 +162,17 @@
     </li>
   </ul>
 </nav>
+<!-- ========== FIM DA PAGINAÇÃO ========== -->
+
+<!-- ========== RODAPÉ do site ========== -->
   <footer class="text-center py-3" style="background-color: gray">
  Bouillon &copy; 2026
 </footer>
+<!-- ========== FIM DO RODAPÉ ========== -->
 
-
+<!-- Importação do JavaScript do Bootstrap (necessário para componentes interativos) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- Importação do JavaScript personalizado do site -->
  <script src="/assests/css/script.js"></script>
 </body>
 </html>

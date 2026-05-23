@@ -3,55 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importação do framework Bootstrap 5 para estilização e componentes responsivos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Importação do CSS personalizado da página de criação de conta -->
     <link rel="stylesheet" href="assests/css/conta.css">
     <title>Conta</title>
 </head>
+
+<!-- Codigo da tela para criar a conta - centralizada vertical e horizontalmente na tela -->
 <body class="d-flex align-items-center py-4 bg-body-tertiary h-100">
+
+  <!-- Contêiner principal do formulário de cadastro -->
   <main class="w-100 m-auto form-container">
     <form>
+
+      <!-- Logo e nome do site no topo do formulário -->
       <h1>
         <img src="assests/imagens/bouillon.png" class="mb-3" height="100" width="120">
         Bouillon
       </h1>
 
+      <!-- Campo de nome de usuário com label flutuante -->
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingUsername" placeholder="nome_usuario">
         <label for="floatingUsername">Nome de usuário</label>
       </div>
 
+      <!-- Campo de e-mail com label flutuante -->
       <div class="form-floating mb-3">
         <input type="email" class="form-control" id="floatingEmail" placeholder="nome@exemplo.com">
         <label for="floatingEmail">Email</label>
       </div>
 
+      <!-- Campo de senha com label flutuante -->
       <div class="form-floating mb-3">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
         <label for="floatingPassword">Senha</label>
       </div>
 
+      <!-- Campo de confirmação de senha com label flutuante -->
       <div class="form-floating mb-3">
         <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirme a senha">
         <label for="floatingConfirmPassword">Digite a senha novamente</label>
       </div> 
 
+      <!-- Campo de CPF ou CNPJ com label flutuante -->
       <div class="form-floating mb-3">
         <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirme a senha">
         <label for="floatingConfirmPassword">CPF/CNPJ</label>
       </div>
 
+      <!-- Campo de data de nascimento com label flutuante -->
       <div class="form-floating mb-3">
         <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirme a senha">
         <label for="floatingConfirmPassword">Data de nascimento</label>
       </div>
 
+      <!-- Botão para enviar o formulário e criar a conta -->
       <button type="submit" class="btn btn-primary">Cadastre-se</button>
+
     </form>
   </main>
 </body>
 
-
-
+<!-- Importação do JavaScript do Bootstrap (necessário para componentes interativos) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

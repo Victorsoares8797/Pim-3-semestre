@@ -1,8 +1,7 @@
-
-
- #next{
-      display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+/* ========== PAGINAÇÃO - Centraliza a navegação de páginas ========== */
+#next{
+      display: flex;           /* Ativa o flexbox para alinhar os itens */
+    align-items: center;       /* Centraliza verticalmente os itens */
+    justify-content: center;   /* Centraliza horizontalmente os itens */
+    display: flex;             /* Reforça o flexbox (declaração duplicada) */
     }
